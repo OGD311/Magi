@@ -1,0 +1,106 @@
+:root {
+    --background-color: #050102;
+    --border-color: #ea6b09;
+    --border: 2px solid var(--border-color);
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    background-color: var(--background-color);
+    color: white;
+    padding: 10px;
+}
+
+input, input:focus-visible, input:focus, input:focus-within {
+    width: 90%;
+    border: var(--border);
+    background-color: var(--background-color);
+    color: var(--border-color);
+    font-size: 16pt;
+}
+
+button {
+    border: var(--border);
+    background-color: var(--background-color);
+    color: var(--border-color);
+    font-size: 16pt;
+}
+
+#magi {
+    height: 70%;
+    padding: 5px;
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    background-color: var(--background-color);
+    border: var(--border)
+}
+
+#casper, #balthasar, #melchior {
+    border: var(--border);
+    color: var(--background-color);
+    font-size: 24pt;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #57a0d7;
+}
+
+.empty {
+    border: none;
+}
+
+.yes {
+    background-color: #6afea6 !important;
+}
+
+.no {
+    background-color: #ad0406 !important;
+}
+
+.conditional {
+    background: repeating-linear-gradient(-35deg, #86da6a 0px 10px,#6afea6 10px 20px);
+}
+
+.unclear {
+    background: repeating-linear-gradient(-35deg, #ecbc04 0px 10px,#83fd30 10px 20px);
+}
+
+.thinking {
+
+    animation: flicker var(--animation-delay) infinite alternate ease-in-out;
+
+}
+
+@keyframes flicker {
+    from { background-color: #57a0d7; }
+    to { background-color: var(--background-color); }
+}
+
+.explanation {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background: var(--background-color);
+    border: var(--border);
+    color: var(--border-color);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+
+    font-size: 12px;
+}

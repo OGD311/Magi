@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Magi</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    </head>
+
+    <body>
+        <h1>The Magi</h1>
+
+        <div id="magi">
+            <div class="empty"></div>
+            <div id="casper">CASPER &bull; 3</div>
+            <div class="empty"></div>
+            <div id="balthasar">BALTHASAR &bull; 2</div>
+            <div class="empty"></div>
+            <div id="melchior">MELCHIOR &bull; 1</div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+            <div class="empty"></div>
+        </div>
+
+        <br><br><br>
+
+        <form id="questionForm">
+            <input type="text" id="questionInput" required><br><br>
+            <button type="submit">Pose</button>
+        </form>
+
+        <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+    </body>
+
+
+</html>
