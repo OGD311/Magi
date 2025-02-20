@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify, render_template
-import ollama
+from flask import Flask, request, jsonify, render_template #type: ignore
+import ollama #type: ignore
 import re
 
 app = Flask(__name__)
@@ -74,4 +74,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, port=8080, host="0.0.0.0")

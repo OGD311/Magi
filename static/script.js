@@ -17,7 +17,7 @@ function pose(question) {
         botDiv.classList.remove('yes', 'no', 'conditional');
         botDiv.classList.add('thinking');
 
-        const delay = ((Math.random() * 100) + 100).toFixed(0) + 'ms';
+        const delay = ((Math.random() * 100) + 200).toFixed(0) + 'ms';
 
         botDiv.style.setProperty('--animation-delay', delay);
 
